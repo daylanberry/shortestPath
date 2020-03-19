@@ -4,7 +4,8 @@
   background-size: contain;
   background-repeat:no-repeat;
   border-radius: 50px;
-  position: ab;
+  position: absolute;
+  margin-right: 10px;
 }
 
 .meeple {

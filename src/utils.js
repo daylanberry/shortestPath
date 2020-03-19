@@ -1,4 +1,5 @@
 export const  dijkstras = (graph, source, ending) => {
+  if (!graph[source] || !graph[ending] || graph==={}) return []
   let distance = {};
   for (let node in graph) {
     distance[node] = Infinity;

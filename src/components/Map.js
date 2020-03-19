@@ -24,6 +24,7 @@ class Map extends React.Component {
       },
       start: false,
       pathMade: false,
+      sparksMove: false,
       list: {
 
       },
@@ -85,6 +86,7 @@ class Map extends React.Component {
     if (!this.state.path.length) {
       this.setState({
         currentPosition: [0, 0],
+        places: {...this.state.places, home: [0, 0]},
         pathMade: false
       })
       alert('Made it to tahoe!')
@@ -97,7 +99,6 @@ class Map extends React.Component {
 
     this.setState({
       path: path,
-      pathMade: true,
       currentPosition
     })
   }
@@ -111,7 +112,7 @@ class Map extends React.Component {
         <div className='map'>
           {
             helpers.mapGenerator().map((row, i) => (
-              <div className='row'>
+              <div className='row' >
                 {row.map((cell, j) => {
                   const x = Math.abs(j - 4)
                   const y = Math.abs(i - 4)
@@ -125,6 +126,7 @@ class Map extends React.Component {
                         unr={unr}
                         legends={legends}
                         truckee={truckee}
+                        home={home}
                       />
                     {currentPosition[0] === x && currentPosition[1] === y ? <Meeple className='meeple'/> : null}
                     </div>
@@ -136,7 +138,21 @@ class Map extends React.Component {
 
           }
           {
-            !this.state.pathMade ? <button onClick={() => this.setGraph(home, dt, unr, legends, truckee, tahoe)}>Begin</button>
+            !this.state.pathMade ?
+            <div>
+              <button onClick={() => this.setGraph(home, dt, unr, legends, truckee, tahoe)}>North Reno</button>
+
+              <button onClick={() => {
+                this.setState(
+                  {
+                  currentPosition: [0, 4],
+                  sparksMove: true,
+                  places: {...this.state.places, home: [0, 4]}
+                  }, () => this.setGraph(this.state.places.home, dt, unr, legends, truckee, tahoe)
+                )
+              }
+            }>Sparks</button></div>
+
             :
             <button onClick={() => this.changePosition()}>Move!</button>
           }

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should return desired cell for house position 1`] = `
+<div
+  className="image"
+>
+  <img
+    className="image"
+    src="https://media.graytvinc.com/images/690*407/paddock+house+reno1.jpg"
+  />
+  A
+</div>
+`;
+
+exports[`should return desired cell for tahoe position 1`] = `
+<div>
+   
+  <img
+    className="image"
+    src="lake-tahoe.jpg"
+  />
+  F
+</div>
+`;

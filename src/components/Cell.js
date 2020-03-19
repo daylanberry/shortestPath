@@ -7,7 +7,7 @@ import { ReactComponent as Meeple } from '../assets/meeple.svg'
 
 import './Cell.css'
 
-const Cell = ({ x, y, position, dt, legends, truckee, unr }) => {
+const Cell = ({ x, y, dt, legends, truckee, unr, home }) => {
 
 
   if (dt[0] === x && dt[1] === y) {
@@ -27,8 +27,8 @@ const Cell = ({ x, y, position, dt, legends, truckee, unr }) => {
   } else if (truckee[0] === x && truckee[1] === y) {
     return <div> <img className='image' src={'https://i.pinimg.com/originals/93/c7/f7/93c7f77f60f2b27e3a32b179731b34a3.jpg'}/>D</div>
 
-  } else if (x === 0 && y === 0 ) {
-    return <div className='test'>
+  } else if (home[0] === x && home[1] === y) {
+    return <div className='image'>
         <img className='image' src={'https://media.graytvinc.com/images/690*407/paddock+house+reno1.jpg'}/>
         A
       </div>
