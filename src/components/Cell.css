@@ -1,0 +1,26 @@
+.image {
+  height: 100px;
+  width: 150px;
+  background-size: contain;
+  background-repeat:no-repeat;
+  border-radius: 50px;
+  position: ab;
+}
+
+.meeple {
+  height: 50px;
+  margin-left: 50px;
+  position: absolute;
+}
+.con {
+  height: 200px;
+}
+
+
+.blank {
+  height: 150px;
+}
+
+.meep {
+  height: 20px;
+}

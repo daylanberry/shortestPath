@@ -1,0 +1,29 @@
+.container {
+  width: 1000px;
+  height: 700px;
+}
+
+.meeple {
+  height: 50px;
+  margin-left: 50px;
+  position: absolute;
+}
+
+.map {
+  width: 1000px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 800px;
+}
+
+
+.cell {
+  width: 100px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
