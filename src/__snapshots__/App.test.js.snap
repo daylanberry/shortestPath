@@ -339,11 +339,18 @@ exports[`should return the correct snapshot of App component 1`] = `
           </div>
         </ul>
       </div>
-      <button
-        onClick={[Function]}
-      >
-        Begin
-      </button>
+      <div>
+        <button
+          onClick={[Function]}
+        >
+          North Reno
+        </button>
+        <button
+          onClick={[Function]}
+        >
+          Sparks
+        </button>
+      </div>
     </div>
   </div>
 </div>
